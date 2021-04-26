@@ -8,11 +8,6 @@ data "aws_availability_zones" "available" {
 #   cidr_block = var.cidr_block
 # }
 
-locals {
-  vpc_id = var.vpc_id
-  vpc_cidr_block = var.cidr_block
-}
-
 # Create var.az_count private subnets, each in a different AZ
 resource "aws_subnet" "private" {
   count             = var.az_count
