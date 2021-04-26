@@ -10,7 +10,7 @@ resource "aws_alb_target_group" "app" {
   name        = var.aws_alb_tg_name
   port        = 80
   protocol    = "HTTP"
-  vpc_id      = aws_vpc.main.id
+  vpc_id      = local.vpc_id
   target_type = "ip"
 
   health_check {

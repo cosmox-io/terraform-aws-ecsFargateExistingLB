@@ -2,6 +2,19 @@ variable "aws_region" {
   description = "The AWS region things are created in"
 }
 
+variable "vpc_id" {
+  type = string
+}
+
+variable "subnet_config" {
+  type = number
+  default = 8
+}
+
+variable "cidr_block" {
+  type = string
+}
+
 variable "ecs_cluster_name" {
   type = string
 }
@@ -17,10 +30,6 @@ variable "log_group_name" {
 variable "ecs_task_execution_role_name" {
   description = "ECS task execution role name"
   default     = "fasalWebAppECSTaskExeRole"
-}
-
-variable "cidr_block" {
-  type = string
 }
 
 variable "az_count" {
