@@ -12,6 +12,9 @@ resource "aws_alb_target_group" "app" {
   protocol    = "HTTP"
   vpc_id      = local.vpc_id
   target_type = "ip"
+  stickiness {
+    type = "lb_cookie"
+  }
 
   health_check {
     healthy_threshold   = "3"
