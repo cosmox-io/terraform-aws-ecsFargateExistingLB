@@ -1,0 +1,4 @@
+myapp.json.tpl
+.terraform
+.terraform.lock.hcl
+terraform.tfvars
