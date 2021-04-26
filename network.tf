@@ -11,7 +11,7 @@ data "aws_availability_zones" "available" {
 # Create var.az_count private subnets, each in a different AZ
 resource "aws_subnet" "private" {
   count             = var.az_count
-  cidr_block        = cidrsubnet(local.vpc_cidr_block, var.subnet_config, count.index)
+  cidr_block        = cidrsubnet(local.vpc_cidr_block, var.subnet_config, sum([count.index, 1]))
   availability_zone = data.aws_availability_zones.available.names[count.index]
   vpc_id            = local.vpc_id
 }
