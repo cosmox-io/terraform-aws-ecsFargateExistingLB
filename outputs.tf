@@ -5,3 +5,7 @@
 # output "final_dns" {
 #   value = "https://app1.fasal.co"
 # }
+
+output "listner_arn" {
+  value = aws_alb_listener.front_end.arn
+}
