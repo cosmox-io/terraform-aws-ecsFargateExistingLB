@@ -41,7 +41,6 @@ resource "aws_subnet" "public" {
 resource "aws_eip" "gw" {
   count      = var.az_count
   vpc        = true
-  depends_on = [aws_internet_gateway.gw]
 }
 
 resource "aws_nat_gateway" "gw" {
