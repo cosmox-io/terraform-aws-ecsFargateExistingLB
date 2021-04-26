@@ -45,6 +45,18 @@ variable "lb_arn" {
   type = string
 }
 
+variable "alb_dns_name" {
+  type = string
+}
+
+variable "alb_zone_id" {
+  type = string
+}
+
+variable "alb_security_group_id" {
+  type = string
+}
+
 # variable "aws_alb_name" {
 #   type = string
 # }
