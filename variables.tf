@@ -11,6 +11,11 @@ variable "subnet_config" {
   default = 8
 }
 
+variable "subnet_configTwo" {
+  type = number
+  default = 1
+}
+
 variable "cidr_block" {
   type = string
 }
